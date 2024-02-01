@@ -1,4 +1,4 @@
-# AI Diagnostic Model for Healthcare Chat
+# Med-U-Web an AI Diagnostic Model for Healthcare 
 
 ## Overview
 
