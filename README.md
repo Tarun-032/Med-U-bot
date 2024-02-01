@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# AI Diagnostic Model for Healthcare Chat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project aims to develop a comprehensive AI diagnostic model for healthcare that enables users to engage in a chat about basic healthcare information. Users can also upload medical reports, with a focus on chest X-rays in the current prototype, for a more in-depth understanding.
 
-In the project directory, you can run:
+**Note: This project is still in development, with the user interface and the deep learning model components completed. Future work will involve developing an NLP chatbot trained on medical data to enhance user interactions and provide relevant solutions.**
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **`model/full_model_weight.h5`**: The trained deep learning model weights file.
+- **`app.py`**: Flask backend server handling image uploads and model predictions.
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **`src/`**: ReactJS frontend source code.
+  - **`components/`**: React components for the user interface.
+  - **`App.css`**: Styles for the main React App component.
+  - **`App.js`**: Main React App component structure.
+  - **`App.test.js`**: Test file for App component.
+  - **`index.css`**: Styles for the React app entry point.
+  - **`index.js`**: Entry point for the React app.
+  - **`logo.png`**: Project logo image.
+  - **`logo.svg`**: Project logo in SVG format.
+  - **`reportWebVitals.js`**: Metrics reporting script.
+  - **`setupTests.js`**: Configuration for Jest tests.
 
-### `npm run build`
+### Others
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **`public/`**: Static assets including the HTML template.
+- **`.gitignore`**: Specifies files and directories to be ignored by Git.
+- **`Chest.ipynb`**: Jupyter Lab notebook file containing the main code used to train the deep learning model.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ReactJS: Frontend user interface.
+- TensorFlow & Keras: For developing and training the deep learning model.
+- OpenCV (cv2): Image processing for medical reports.
+- Jupyter Lab: Notebook for developing and training machine learning models.
+- Python: Backend server logic and data processing.
+- Flask: Backend server framework.
+- Google Colab: Collaborative environment for training machine learning models and data analysis.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate to the `frontend` directory and install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-## Learn More
+3. Start the React app:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. In a separate terminal, navigate to the `backend` directory and run the Flask app:
 
-### Code Splitting
+   ```bash
+   cd backend
+   python app.py
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application should now be accessible at `http://localhost:3000` for the React frontend and `http://localhost:5000` for the Flask backend.
 
-### Analyzing the Bundle Size
+Feel free to explore and contribute to the development of this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can customize this README file further based on additional details or specific instructions for contributors and users.
